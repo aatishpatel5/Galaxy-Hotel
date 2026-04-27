@@ -42,7 +42,7 @@ export function Home() {
             transition={{ duration: 0.5, delay: 0.6 }}
             className="text-lg text-gray-200 mb-10 max-w-2xl mx-auto drop-shadow md:hidden"
           >
-            Experience premium luxury and exquisite vegetarian dining in a serene, welcoming atmosphere.
+            Premium luxury, pure veg dining, and absolute peace.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -213,7 +213,7 @@ export function Home() {
                   <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-md text-gray-900 font-semibold shadow-sm">
                     {dish.price}
                   </div>
-                </div>
+                </div> 
                 <div className="p-6">
                   <h4 className="text-xl font-serif font-bold text-gray-900">{dish.name}</h4>
                   <p className="text-gray-500 mt-2 text-sm italic">Freshly prepared with love.</p>

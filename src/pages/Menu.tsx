@@ -113,18 +113,20 @@ export function Menu() {
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
               </div>
-              <div className="flex-1 min-w-0">
-                <div className="flex justify-between items-start mb-1 sm:mb-2 gap-2">
-                  <h3 className="text-base sm:text-lg font-serif font-bold text-gray-900 group-hover:text-brand-wood transition-colors truncate">
+              <div className="flex-1 min-w-0 flex flex-col justify-between">
+                <div>
+                  <h3 className="text-base sm:text-lg font-serif font-bold text-gray-900 group-hover:text-brand-wood transition-colors leading-tight mb-1">
                     {item.name}
                   </h3>
-                  <span className="text-base sm:text-lg font-bold text-brand-wood font-mono flex-shrink-0">
+                  <p className="text-gray-500 text-xs sm:text-sm leading-relaxed line-clamp-2 sm:line-clamp-none">
+                    {item.desc}
+                  </p>
+                </div>
+                <div className="mt-2 flex justify-start">
+                  <span className="text-sm sm:text-base font-bold text-brand-wood font-mono bg-brand-cream/50 px-3 py-1 rounded-md sm:bg-transparent sm:px-0 sm:py-0 sm:text-lg">
                     ₹{item.price}
                   </span>
                 </div>
-                <p className="text-gray-500 text-xs sm:text-sm leading-relaxed line-clamp-2 sm:line-clamp-none">
-                  {item.desc}
-                </p>
               </div>
             </div>
           ))}
