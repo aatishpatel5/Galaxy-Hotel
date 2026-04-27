@@ -111,7 +111,11 @@ export function Home() {
             >
               <div className="aspect-[4/5] rounded-lg overflow-hidden shadow-2xl relative z-10">
                 <img
+<<<<<<< HEAD
                    src="/public/room.webp" 
+=======
+                   src="/room.webp"
+>>>>>>> c0b06afb7d59e036a4fa21ddc579c4c0ac135fe0
                    alt="Luxurious Room"
                    className="w-full h-full object-cover"
                 />
@@ -168,7 +172,7 @@ export function Home() {
             >
               <div className="aspect-[4/5] rounded-lg overflow-hidden shadow-2xl relative z-10">
                 <img
-                   src="/public/rooftop.webp"
+                   src="/rooftop.webp"
                    alt="Rooftop Hall & Events"
                    className="w-full h-full object-cover"
                 />
