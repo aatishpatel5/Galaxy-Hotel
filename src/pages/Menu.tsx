@@ -74,13 +74,13 @@ export function Menu() {
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Category Selector */}
-        <div className="flex flex-wrap justify-center gap-2 mb-12">
+        <div className="flex overflow-x-auto sm:flex-wrap sm:justify-center gap-2 mb-12 pb-2 w-full px-1" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
           {menuCategories.map((cat) => (
             <button
               key={cat.id}
               onClick={() => setActiveCategory(cat.id)}
               className={cn(
-                "px-6 py-2 rounded-full text-sm font-medium transition-all duration-300",
+                "px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 flex-shrink-0",
                 activeCategory === cat.id 
                   ? "bg-brand-wood text-white shadow-md transform scale-105" 
                   : "bg-gray-100 text-gray-600 hover:bg-gray-200"
@@ -90,6 +90,11 @@ export function Menu() {
             </button>
           ))}
         </div>
+        <style>{`
+          .overflow-x-auto::-webkit-scrollbar {
+            display: none;
+          }
+        `}</style>
 
         {/* Menu Items Grid */}
         <motion.div 
@@ -108,16 +113,16 @@ export function Menu() {
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
               </div>
-              <div className="flex-1">
-                <div className="flex justify-between items-start mb-2">
-                  <h3 className="text-lg font-serif font-bold text-gray-900 group-hover:text-brand-wood transition-colors">
+              <div className="flex-1 min-w-0">
+                <div className="flex justify-between items-start mb-1 sm:mb-2 gap-2">
+                  <h3 className="text-base sm:text-lg font-serif font-bold text-gray-900 group-hover:text-brand-wood transition-colors truncate">
                     {item.name}
                   </h3>
-                  <span className="text-lg font-bold text-brand-wood ml-4 font-mono">
+                  <span className="text-base sm:text-lg font-bold text-brand-wood font-mono flex-shrink-0">
                     ₹{item.price}
                   </span>
                 </div>
-                <p className="text-gray-500 text-sm leading-relaxed">
+                <p className="text-gray-500 text-xs sm:text-sm leading-relaxed line-clamp-2 sm:line-clamp-none">
                   {item.desc}
                 </p>
               </div>
@@ -125,9 +130,7 @@ export function Menu() {
           ))}
         </motion.div>
         
-        <div className="mt-16 text-center text-sm text-gray-400 italic">
-          * Prices are subject to applicable taxes. Menu items are 100% vegetarian.
-        </div>
+        
       </div>
     </div>
   );

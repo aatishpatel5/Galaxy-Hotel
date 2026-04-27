@@ -57,13 +57,13 @@ export function Rooms() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="p-8 lg:w-3/5 flex flex-col justify-between">
+              <div className="p-5 sm:p-8 lg:w-3/5 flex flex-col justify-between">
                 <div>
-                  <div className="flex justify-between items-start mb-4">
-                    <h2 className="text-2xl font-serif font-bold text-gray-900">{room.name}</h2>
-                    <div className="text-right">
+                  <div className="flex flex-col sm:flex-row justify-between items-start gap-2 sm:gap-0 mb-4">
+                    <h2 className="text-xl sm:text-2xl font-serif font-bold text-gray-900">{room.name}</h2>
+                    <div className="text-left sm:text-right">
                       <span className="block text-sm text-gray-500 font-medium">Starting from</span>
-                      <span className="text-2xl font-bold text-brand-wood">₹{room.price}</span>
+                      <span className="text-xl sm:text-2xl font-bold text-brand-wood">₹{room.price}</span>
                       <span className="text-sm text-gray-500"> / night</span>
                     </div>
                   </div>
@@ -81,14 +81,14 @@ export function Rooms() {
                   </div>
                 </div>
                 
-                <div className="pt-6 border-t border-gray-100 flex justify-between items-center bg-gray-50/50 -mx-8 -mb-8 p-8 rounded-b-2xl lg:rounded-br-2xl lg:rounded-bl-none">
+                <div className="pt-6 border-t border-gray-100 flex flex-col sm:flex-row justify-between items-center gap-6 sm:gap-4 bg-gray-50/50 -mx-5 sm:-mx-8 -mb-5 sm:-mb-8 p-5 sm:p-8 rounded-b-2xl lg:rounded-br-2xl lg:rounded-bl-none">
                    <div className="flex space-x-4 text-gray-400">
                      <Wifi size={20} title="Free Wi-Fi" />
                      <Wind size={20} title="Air Conditioning" />
                      <Tv size={20} title="TV" />
                      <Coffee size={20} title="Tea/Coffee Maker" />
                    </div>
-                  <Button size="lg" variant="brand" asChild>
+                  <Button size="lg" variant="brand" className="w-full sm:w-auto" asChild>
                     <a href="https://www.agoda.com/hotel-galaxy-h52507777/hotel/banswara-in.html" target="_blank" rel="noopener noreferrer">
                       Check Availability
                     </a>
